@@ -1,0 +1,27 @@
+//search by firstName
+curl --location --request GET 'localhost:8081/api/employees/search/gl?firstName=Gourav Badhyal' \
+--header 'Cookie: JSESSIONID=3E0063110C9ACAD58556812C2A1CB336; JSESSIONID=736E48EE2ED30BE96E9DC6068C945FAB'
+
+//Sor by asc / desc
+curl --location --request GET 'localhost:8081/api/employees/sort?order=asc' \
+--header 'Cookie: JSESSIONID=3E0063110C9ACAD58556812C2A1CB336; JSESSIONID=736E48EE2ED30BE96E9DC6068C945FAB'
+
+// Search employee by id
+curl --location --request GET 'localhost:8081/api/employees/20' \
+--header 'Cookie: JSESSIONID=3E0063110C9ACAD58556812C2A1CB336; JSESSIONID=736E48EE2ED30BE96E9DC6068C945FAB'\''; JSESSIONID=736E48EE2ED30BE96E9DC6068C945FAB'
+
+
+// Delete employee by id
+curl --location --request DELETE 'localhost:8081/api/employees/14' \
+--header 'Cookie: JSESSIONID=2C284586CA2A5C1AA49598CDCD3FE046'
+
+//Update an epmployee
+curl --location --request PUT 'localhost:8081/api/employees/update' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=736E48EE2ED30BE96E9DC6068C945FAB' \
+--data-raw ' {
+        "id": 14,
+        "firstName": "Gourav Badhyal",
+        "lastName": "Sharma",
+        "email": "gouravbadhyal364@gmail.com"
+    }'
